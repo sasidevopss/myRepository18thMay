@@ -4,5 +4,5 @@
   tasks:
   - name: install apache2 on ubuntu 18.04 Linux servers
     apt:
-    - name: apache2
+      name: apache2
       state: present
