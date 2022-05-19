@@ -8,8 +8,8 @@
       state: present
     when: ansible_os_family == "Debian"
 
-  - name: Install apache2 on RedHat Linux servers.
+  - name: install the latest version of Apache
     yum:
       name: httpd
-      state: present
+      state: latest
     when: ansible_os_family == "RedHat"
