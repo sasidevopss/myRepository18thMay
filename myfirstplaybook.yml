@@ -2,14 +2,14 @@
 - hosts: all
   become: yes
   tasks:
-  - name: Install apache2 on ubuntu 18.04 Linux servers.
-    apt:
-      name: apache2
-      state: present
-    when: ansible_os_family == "Debian"
+  - name: Installing apache2 on Ubuntu Linux 18.04 node server
+    apt: 
+     name: apache2
+     state: present
+    when:  ansible_os_family == "Debian"
 
-  - name: install the latest version of Apache
-    yum:
-      name: httpd
-      state: latest
-    when: ansible_os_family == "RedHat"
+  - name: Installing apache2 on RedHat Linux node server
+    yum: 
+     name: httpd
+     state: present
+    when:  ansible_os_family == "RedHat"
