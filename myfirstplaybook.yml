@@ -8,7 +8,7 @@
      state: present
     when:  ansible_os_family == "Debian"
 
-  - name: Installing apache2 on RedHat Linux node server
+  - name: Installing apache2 on Amazon RedHat Linux and RedHat Linux node server
     yum: 
      name: httpd
      state: present
