@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: mywebservers
   become: yes
   tasks:
   - name: Installing apache2 on Ubuntu Linux 18.04 node server
