@@ -1,15 +1,8 @@
 ---
-- hosts: mywebservers
+- hosts: all
   become: yes
   tasks:
-  - name: Install Java on Ubuntu 18.04 web servers.
-    apt:
-      name: "{{myjavapackforubuntu}}"
-      state: present
-    when: ansible_os_family == "Debian"
-
   - name: Install Java on Amazon Red Hat web servers.
     apt:
       name: java-1.8.0-openjdk
       state: present
-    when: ansible_os_family == "RedHat"
