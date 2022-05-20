@@ -10,6 +10,6 @@
 
   - name: Install Java on Amazon Red Hat web servers.
     apt:
-      name: "{{myjavapackforredhat}}"
+      name: java-1.8.0-openjdk
       state: present
     when: ansible_os_family == "RedHat"
