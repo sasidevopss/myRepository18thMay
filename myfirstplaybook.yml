@@ -4,12 +4,12 @@
   tasks:
   - name: Installing apache2 on Ubuntu Linux 18.04 node server
     apt: 
-     name: apache2
+     name: "{{mywebpackforubuntu}}"
      state: present
     when:  ansible_os_family == "Debian"
 
   - name: Installing apache2 on Amazon RedHat Linux and RedHat Linux node server
     yum: 
-     name: httpd
+     name: "{{mywebpackforredhat}}"
      state: present
     when:  ansible_os_family == "RedHat"
