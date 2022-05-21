@@ -11,7 +11,7 @@
 
   -  name: Install Softwares.
      apt: 
-      name: "{{item}}"
+      name: "{{ item }}"
       state: present
      loop: 
             - "{{myvar1}}"
