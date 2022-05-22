@@ -30,5 +30,8 @@
       state: present
     loop:
        - "{{myvar5}}"
+       - "{{myvar1}}"
+       - "{{myvar2}}"
+       - "{{myvar3}}"
     when: ansible_os_family == "RedHat"
       
