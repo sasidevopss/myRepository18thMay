@@ -20,7 +20,7 @@
   - name: Install tree software on the output of first task.
     yum:
      name: tree
-     state: present
+     statee: present
     tags: mytree
 
   - name: Install wget software on the output of first task. 
