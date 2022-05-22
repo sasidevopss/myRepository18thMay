@@ -11,6 +11,7 @@
   - name: Display host name.
     debug:
       msg: "{{myResult}}"
+    tags: mygit
 
   - name: Install git software on the output of first task.
     yum:
