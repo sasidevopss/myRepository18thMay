@@ -17,6 +17,7 @@
      state: present
     when: myResult.stderr != ""
     tags: mygit
+    ignore_errors: yes
 
   - name: Install tree software on the output of first task.
     yum:
