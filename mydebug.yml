@@ -6,6 +6,7 @@
   - name: linux command.
     command: hostname -f
     register: myResult
+    tags: mygit
 
   - name: Display host name.
     debug:
@@ -15,6 +16,7 @@
     yum:
      name: git
      state: present
+    when: myResult.stderr != ""
     tags: mygit
     ignore_errors: yes
 
@@ -22,6 +24,7 @@
     yum:
      name: tree
      state: present
+    when: myResult.stderr == ""
     tags: mygit
     ignore_errors: yes
 
