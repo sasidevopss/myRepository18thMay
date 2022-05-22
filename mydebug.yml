@@ -15,13 +15,15 @@
     yum:
      name: git
      state: present
+    when: myResult.stderr != ""
     tags: mygit
 
   - name: Install tree software on the output of first task.
     yum:
      name: tree
-     statee: present
-    tags: mytree
+     state: present
+    when: myResult.stderr == ""
+    tags: mygit
     ignore_errors: yes
 
   - name: Install wget software on the output of first task. 
