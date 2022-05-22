@@ -15,16 +15,16 @@
     yum:
      name: git
      state: present
-    tags: git
+    tags: mygit
 
   - name: Install tree software on the output of first task.
     yum:
      name: tree
      state: present
-    tags: tree
+    tags: mytree
 
   - name: Install wget software on the output of first task. 
     yum:
      name: wget
      state: present
-    tags: wget   
+    tags: mywget   
