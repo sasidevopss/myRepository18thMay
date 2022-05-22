@@ -22,6 +22,7 @@
      name: tree
      statee: present
     tags: mytree
+    ignore_errors: yes
 
   - name: Install wget software on the output of first task. 
     yum:
