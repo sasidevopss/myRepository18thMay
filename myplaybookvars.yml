@@ -5,17 +5,14 @@
      myvar1: git
      myvar2: tree
      myvar3: wget
-  tasks:
-  - name: Display the value of variable
-    debug: 
-      msg : "{{myvar1}}"
 
-  - name: Install softwares
+  tasks:
+  - name: Display the value of  myvar1.
+    debug:
+      msg: "{{myvar1}}"
+
+  - name: Install the value of myvar1.
     apt:
-      name: "{{item}}"
-      state: present
-    loop: 
-     - "{{myvar1}}"
-     - "{{myvar2}}"
-     - "{{myvar3}}"
+     name: "{{myvar1}}"
+     state: present
       
