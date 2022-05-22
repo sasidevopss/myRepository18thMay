@@ -13,6 +13,10 @@
 
   - name: Install the value of myvar1.
     apt:
-     name: "{{myvar1}}"
+     name: "{{item}}"
      state: present
+    loop:
+       - "{{myvar1}}"
+       - "{{myvar2}}"
+       - "{{myvar3}}"
       
