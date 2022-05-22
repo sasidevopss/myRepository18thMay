@@ -15,7 +15,6 @@
     yum:
      name: git
      state: present
-    when: myResult.stderr != ""
     tags: mygit
     ignore_errors: yes
 
@@ -23,7 +22,6 @@
     yum:
      name: tree
      state: present
-    when: myResult.stderr == ""
     tags: mygit
     ignore_errors: yes
 
@@ -31,5 +29,4 @@
     yum:
      name: wget
      state: present
-    when: myResult.stderr == ""
     tags: mywget
