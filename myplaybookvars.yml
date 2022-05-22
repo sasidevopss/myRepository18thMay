@@ -5,6 +5,7 @@
      myvar1: git
      myvar2: tree
      myvar3: wget
+     myvar4: apache2
 
   tasks:
   - name: Display the value of  myvar1.
@@ -19,4 +20,5 @@
        - "{{myvar1}}"
        - "{{myvar2}}"
        - "{{myvar3}}"
+       - "{{myvar4}}"
       
