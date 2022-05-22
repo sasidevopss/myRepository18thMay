@@ -11,13 +11,13 @@
     debug:
       msg: "{{myResult}}"
 
-  - name: Install softwares on the output of first task.
+  - name: Install git software on the output of first task.
     yum:
      name: git
      state: present
     when: myResult.stderr == ""
 
-  - name: Install softwares on the output of first task.
+  - name: Install tree software on the output of first task.
     yum:
      name: tree
      state: present
