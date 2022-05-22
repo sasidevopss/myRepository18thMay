@@ -25,7 +25,7 @@
     when: ansible_os_family == "Debian"
 
   - name: Install softwares on RedHat
-    apt:
+    yum:
       name: "{{item2}}"
       state: present
     loop:
