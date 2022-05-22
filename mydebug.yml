@@ -21,10 +21,10 @@
     yum:
      name: tree
      state: present
-    tags: mygit
+    tags: mytree
 
   - name: Install wget software on the output of first task. 
     yum:
      name: wget
      state: present
-    tags: mygit
+    tags: mywget
