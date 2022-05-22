@@ -1,18 +1,19 @@
 ---
-- hosts: 172.31.22.153
+- hosts: mywebservers
   become: yes
   vars:
      myvar1: git
      myvar2: tree
      myvar3: wget
      myvar4: apache2
+     myvar5: httpd
 
   tasks:
   - name: Display the value of  myvar1.
     debug:
       msg: "{{myvar1}}"
 
-  - name: Install the value of myvar1.
+  - name: Install softwares on Ubuntu.
     apt:
      name: "{{item}}"
      state: present
@@ -21,4 +22,13 @@
        - "{{myvar2}}"
        - "{{myvar3}}"
        - "{{myvar4}}"
+    when: ansible_os_family == "Debian"
+
+  - name: Install softwares on RedHat
+    apt:
+      name: "{{item2}}"
+      state: present
+    loop:
+       - "{{myvar5}}"
+    when: ansible_os_family == "RedHat"
       
