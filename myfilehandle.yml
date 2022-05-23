@@ -8,3 +8,8 @@
      apt:
        name: apache2
        state: present
+
+  -  name: Change the home page text.
+     template:
+       src: index.j2
+       dest: /var/www/html/index.html
