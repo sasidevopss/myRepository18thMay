@@ -2,7 +2,9 @@
 - hosts: 172.31.22.153
   become: yes
   tasks:
-  -  name: Create file on above server.
-     file: 
-       path: /home/ubuntu/testfile
-       state: touch
+  -  include_tasks: myfile.yml
+
+  -  name: Install apache2 on webserver
+     apt:
+       name: apache2
+       state: present
