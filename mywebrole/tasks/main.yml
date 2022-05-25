@@ -13,5 +13,4 @@
   notify: Restart web server
 
 - include_tasks: commontasks.yml
-  notify: Restart web server
   

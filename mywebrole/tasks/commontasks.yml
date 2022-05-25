@@ -3,3 +3,4 @@
   file:
     name: /home/ubuntu/samplefile
     state: touch
+  notify: Restart web server
