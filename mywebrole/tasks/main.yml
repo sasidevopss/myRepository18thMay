@@ -1,2 +1,17 @@
 ---
 # tasks file for mywebrole
+- name: Install apache2 web server on Node server
+  apt: 
+    name: apache2
+    state: present
+  notify: Restart web server
+
+- name: Change home page of server.
+  template:
+    src: templates/index.j2
+    dest: /var/www/html/index.html
+  notify: Restart web server
+
+- include_tasks: commontasks.yml
+  notify: Restart web server
+  
