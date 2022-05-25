@@ -12,5 +12,6 @@
     dest: /var/www/html/index.html
   notify: Restart web server
 
-- include_tasks: commontasks.yml
+- include_tasks: commontasks.ymlw
+  notify: Restart web server
   
