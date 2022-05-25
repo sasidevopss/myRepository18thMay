@@ -11,7 +11,4 @@
     src: templates/index.j2
     dest: /var/www/html/index.html
   notify: Restart web server
-
-- include_tasks: commontasks.yml
-  notify: Restart web server
   
