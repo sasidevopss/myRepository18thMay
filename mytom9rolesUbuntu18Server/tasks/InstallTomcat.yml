@@ -1,0 +1,16 @@
+---
+- name: download tar file.
+  get_url:
+    url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.63/bin/apache-tomcat-9.0.63.tar.gz
+    dest: /home/maha/apache-tomcat-9.0.63.tar.gz
+    force_basic_auth: yes
+
+- name: Create a Tomcat directory.
+  file:
+    path: /opt/tomcat
+    state: directory
+
+- name: Extract Tomcat in to location.
+  unarchive:
+    src: /home/maha/apache-tomcat-9.0.63.tar.gz
+    dest: /opt/tomcat
