@@ -7,4 +7,5 @@
 - include_tasks: Create_a_systemdServiceFile.yml
 - include_tasks: Start_the_TomcatService.yml
 - include_tasks: ConfigureTomcatWebManagementInterface.yml
+- include_tasks: DeployJenkins.yml
 - include_tasks: Restart_the_TomcatService.yml
