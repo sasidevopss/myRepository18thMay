@@ -2,16 +2,16 @@
 - name: Give the tomcat group ownership over the entire installation directory.
   file:
     path: /opt/tomcat
-    state: directory
-    recurse: yes
     group: tomcat
+    recurse: yes
+    state: directory
 
 - name: give the tomcat group read access to the conf directory and all of its contents.
   file:
     path: /opt/tomcat/conf
-    state: directory
     recurse: yes
     mode: g+r
+    state: directory
 
 - name: execute access to the directory conf directory.
   file:
