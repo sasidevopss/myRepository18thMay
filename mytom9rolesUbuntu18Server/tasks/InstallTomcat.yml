@@ -11,7 +11,6 @@
     state: directory
 
 - name: Extract Tomcat in to location.
-  unarchive:
-    src: /home/ubuntu/apache-tomcat-9.0.63.tar.gz
-    dest: /opt/tomcat
-    remote_src: True
+  command:
+    cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-9.0.63.tar.gz -C /opt/tomcat --strip-components=1
+    creates: /opt/tomcat/LICENSE
