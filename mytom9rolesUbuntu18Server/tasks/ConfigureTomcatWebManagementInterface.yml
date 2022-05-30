@@ -4,7 +4,3 @@
    src: templates/tomcatuserslogin.j2
    dest: /opt/tomcat/conf/tomcat-users.xml
 
-- name: Copy tomcat host-manager file.
-  template:
-   src: templates/tomcathostmanager.j2
-   dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
