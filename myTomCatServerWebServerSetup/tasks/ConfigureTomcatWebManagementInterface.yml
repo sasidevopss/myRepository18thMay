@@ -1,0 +1,20 @@
+---
+- name:  login to our Tomcat server.
+  template:
+    src: templates/tomcatusers.j2
+    dest: /opt/tomcat/conf/tomcat-users.xml
+
+- name:  change the IP address Manager restrictions for Tomcat server.
+  template:
+    src: templates/tomcatmanager.j2
+    dest: /opt/tomcat/webapps/manager/META-INF/context.xml
+
+- name:  change the IP address Host Manager restrictions for Tomcat server.
+  template:
+    src: templates/tomcathostmanager.j2
+    dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
+
+- name: Make sure a Tomcat server is restarted.
+  systemd: 
+    name: tomcat
+    state: restarted

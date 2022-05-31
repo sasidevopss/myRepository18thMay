@@ -5,3 +5,4 @@
 - include_tasks: InstallTomcat.yml
 - include_tasks: UpdatePermissions.yml
 - include_tasks: CreateASystemdServiceFile.yml
+- include_tasks: ConfigureTomcatWebManagementInterface.yml
