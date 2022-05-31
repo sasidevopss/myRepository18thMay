@@ -6,4 +6,6 @@
 - include_tasks: UpdatePermissions.yml
 - include_tasks: CreateASystemdServiceFile.yml
 - include_tasks: ConfigureTomcatWebManagementInterface.yml
+- include_tasks: RestartTomCatWebserver.yml
 - include_tasks: DeployJenkins.yml
+- include_tasks: RestartTomCatWebserver.yml

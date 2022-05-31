@@ -13,8 +13,3 @@
   template:
     src: templates/tomcathostmanager.j2
     dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
-
-- name: Make sure a Tomcat server is restarted.
-  systemd: 
-    name: tomcat
-    state: restarted

@@ -1,0 +1,4 @@
+- name: Make sure a Tomcat server is restarted.
+  systemd: 
+    name: tomcat
+    state: restarted
