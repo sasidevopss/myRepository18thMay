@@ -1,5 +1,7 @@
-[mywebservers]
+[myAmazonRedhatWebservers]
 172.31.24.160
+
+[myUbuntuWebservers]
 172.31.27.125
 172.31.22.153
 
