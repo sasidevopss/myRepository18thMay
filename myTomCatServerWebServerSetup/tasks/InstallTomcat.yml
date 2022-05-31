@@ -1,0 +1,16 @@
+---
+- name: download file and force basic auth
+  get_url:
+    url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.63/bin/apache-tomcat-9.0.63.tar.gz
+    dest: /home/maha/apache-tomcat-9.0.63.tar.gz
+    force_basic_auth: yes
+
+- name: Create a tomcat directory.
+  file:
+    path: /opt/tomcat
+    state: directory
+
+- name: Extract Tomcat in to location.
+  command:
+    cmd: sudo tar xzvf /home/maha/apache-tomcat-9.0.63.tar.gz -C /opt/tomcat --strip-components=1
+    creates: /opt/tomcat/LICENSE
