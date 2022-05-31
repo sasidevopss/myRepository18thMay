@@ -1,3 +1,4 @@
 ---
 # tasks file for myTomCatServerWebServerSetup
 - include_tasks: InstallJava.yml
+- include_tasks: CreateTomcatUser.yml
